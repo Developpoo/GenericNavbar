@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar only HTML e CSS</title>
+    <style>
+        /* Reset dei margini e dei padding */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Stile generale del menù */
+        .menu {
+            background-color: #f1f1f1;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        /* Stile del logo */
+        .logo {
+            width: 100px;
+        }
+
+        /* Stile delle voci del menù */
+        .menu-item {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        /* Stile dei link nel menù */
+        .menu-item a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+
+        /* Stile delle voci di menù con menù tendina */
+        .menu-item-with-dropdown {
+            position: relative;
+        }
+
+        /* Stile dell'icona per il menù tendina */
+        .dropdown-icon {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* Stile del menù tendina */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f1f1f1;
+            display: none;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Stile delle voci nel menù tendina */
+        .dropdown-menu-item {
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+
+        /* Stile della voce di menù con sfondo colorato */
+        .colored-menu-item {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        /* Stile dell'icona personalizzata nella voce Contatti */
+        .contact-icon {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        /* Mostra il menù tendina quando il mouse si posiziona sopra la voce di menù */
+        .menu-item-with-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="logo_cristal.png" alt="Logo CRISTAL">
+        </div>
+        <ul class="menu-items">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item menu-item-with-dropdown">
+                <a href="#">Page 2</a>
+                <span class="dropdown-icon">&#9662;</span>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-menu-item"><a href="#">Page 2/A</a></li>
+                    <li class="dropdown-menu-item"><a href="#">Page 2/B</a></li>
+                    <li class="dropdown-menu-item"><a href="#">Page 2/C</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Page 3</a></li>
+            <li class="menu-item"><a href="#">Page 4</a></li>
+            <li class="menu-item colored-menu-item">
+                <a href="#">
+                    <span class="contact-icon">☎</span> Call
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
